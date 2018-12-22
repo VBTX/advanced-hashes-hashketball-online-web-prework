@@ -216,18 +216,18 @@ shoe_sizes = []
 game_hash[:home][:players].each do |name, value|
   value.each do |key, num|
     if key == :shoe
-      shoe_sizes << key
+      shoe_sizes << num.to_i
     end
   end
   end
 game_hash[:away][:players].each do |name, value|
   value.each do |key, num|
     if key == :shoe
-      shoe_sizes << key
+      shoe_sizes << num.to_i
     end
   end
 end
-shoe_sizes.max
+return shoe_sizes.max
 end
 
 def big_shoe_rebounds
