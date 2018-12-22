@@ -236,7 +236,7 @@ def big_shoe_rebounds
       max = shoe_size_max.to_s
       if max == v
       name = key
-      puts game_hash[:home][:players][name][:rebounds]
+      return game_hash[:home][:players][name][:rebounds]
       else
       false
       end
