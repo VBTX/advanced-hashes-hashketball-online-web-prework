@@ -232,8 +232,7 @@ end
 
 def big_shoe_rebounds
     game_hash[:home][:players].each do |key, value|
-      value.each do |key1, value1|
-        return value1
+      return key
         end
       end
     end
