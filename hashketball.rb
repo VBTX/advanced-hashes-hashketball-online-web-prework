@@ -237,4 +237,3 @@ def big_shoe_rebounds
           return key
         end
       end
-end
