@@ -239,4 +239,3 @@ def big_shoe_rebounds
               return game_hash[:away][:players][name][:rebounds]
             end
           end
-        end
