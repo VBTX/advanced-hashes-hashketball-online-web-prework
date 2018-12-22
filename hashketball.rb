@@ -210,31 +210,35 @@ end
 stats
 end
 
-def big_shoe_rebounds
-  shoe_sizes = []
-  game_hash[:home][:players].each do |name, value|
-    value.each do |key, num|
-      if key == :shoe
-        shoe_sizes << key
-      end
-    end
-    end
-  game_hash[:away][:players].each do |name, value|
-    value.each do |key, num|
-      if key == :shoe
-        shoe_sizes << key
-      end
+
+def shoe_size_max
+shoe_sizes = []
+game_hash[:home][:players].each do |name, value|
+  value.each do |key, num|
+    if key == :shoe
+      shoe_sizes << key
     end
   end
-  max = shoe_sizes.max
+  end
+game_hash[:away][:players].each do |name, value|
+  value.each do |key, num|
+    if key == :shoe
+      shoe_sizes << key
+    end
+  end
+end
+max = shoe_sizes.max
+end
+
+def big_shoe_rebounds
     game_hash[:home][:players].each do |key, value|
       value.each do |key1, value1|
-        if value1 = max
+        if value1 == shoe_size_max
           name = key
           return game_hash[:home][:players][name][:rebounds]
         else game_hash[:away][:players].each do |key, value|
           value.each do |key1, value1|
-            if value1 = max
+            if value1 == shoe_size_max
               name = key
               return game_hash[:away][:players][name][:rebounds]
             end
