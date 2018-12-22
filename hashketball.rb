@@ -232,6 +232,14 @@ end
 
 def big_shoe_rebounds
     game_hash[:home][:players].each do |key, value|
-      value
-        end
-  end
+      value.each do |k, v|
+      max = shoe_size_max.to_s
+      if max == v
+      name = key
+      puts game_hash[:home][:players][name][:rebounds]
+      else
+      false
+      end
+end
+      end
+      end
