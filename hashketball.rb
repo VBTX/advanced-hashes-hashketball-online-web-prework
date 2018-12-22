@@ -233,9 +233,7 @@ end
 def big_shoe_rebounds
     game_hash[:home][:players].each do |key, value|
       value.each do |key1, value1|
-        if value1 == shoe_size_max
-          name = key
-          return name
+        puts key1
 
 end
 end
