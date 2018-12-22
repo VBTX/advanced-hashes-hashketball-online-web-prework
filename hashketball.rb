@@ -235,7 +235,7 @@ def big_shoe_rebounds
       value.each do |key1, value1|
         if value1 == shoe_size_max
           name = key
-          game_hash[:home][:players][key][:rebounds]
+          game_hash[:home][:players][key1][:rebounds]
 
 end
 end
